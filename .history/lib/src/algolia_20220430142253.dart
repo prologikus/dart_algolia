@@ -57,7 +57,7 @@ class Algolia {
   String get _insightsHost => 'https://insights.algolia.io/1/';
 
   List<String> get _userAgents {
-    final os = "Android";
+    final os = "${Platform.operatingSystem} ${Platform.operatingSystemVersion}";
     final dart = "Dart ${Platform.version}";
     final client = "Algolia for Dart (unofficial) ($version)";
     return [os, dart, client, ...extraUserAgents];
